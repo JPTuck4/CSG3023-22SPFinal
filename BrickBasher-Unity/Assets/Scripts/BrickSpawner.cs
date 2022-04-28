@@ -2,8 +2,8 @@
  * Created by: Bob Baloney
  * Date Created: April 20, 2022
  * 
- * Last Edited by: 
- * Last Edited:
+ * Last Edited by: JP
+ * Last Edited: 4/28
  * 
  * Description: Spawns bircks
 ****/
@@ -36,7 +36,7 @@ public class BrickSpawner : MonoBehaviour
             {
                 Vector3 pos = new Vector3(x * brickPadding.x , y * brickPadding.y, 0); 
               
-                brickGo = Instantiate.brickPrefab; 
+                var brickGo = Instantiate(brickPrefab); //instantiates the prefab
               
                 brickGo.transform.parent = transform; 
                 brickGo.transform.localPosition = pos; 
